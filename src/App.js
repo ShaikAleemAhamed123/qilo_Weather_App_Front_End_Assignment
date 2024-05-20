@@ -26,7 +26,7 @@ const App = () => {
           params: {
             q: location,
             units: 'metric',
-            appid: process.env.API_KEY
+            appid: process.env.REACT_APP_API_KEY
           }
         }
       );
