@@ -159,8 +159,8 @@ const App = () => {
         </div>
         <div className='card'>
           <h3>Weather Description</h3>
-          <p>{weatherData.weatherDescription} <img src={`http://openweathermap.org/img/w/${weatherData.icon}.png`} ></img></p>
-        </div>
+          <p>{weatherData.weatherDescription} <img src={`http://openweathermap.org/img/w/${weatherData.icon}.png`} alt={`${weatherData.weatherDescription} weather icon`}></img></p>
+        </div>}
       </div>
       <div className='chart-container'>
         <Bar data={chartData} options={chartOptions} />
