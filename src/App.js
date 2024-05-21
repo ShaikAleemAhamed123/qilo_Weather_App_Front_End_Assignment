@@ -95,20 +95,35 @@ const App = () => {
     scales: {
       x: {
         ticks: {
-          color: 'black'
+          color: 'black' // Color of x-axis labels
         }
       },
       y: {
         ticks: {
-          color: 'black'
+          color: 'black' // Color of y-axis labels
         }
+      }
+    },
+    plugins: {
+      legend: {
+        labels: {
+          color: 'black' // Color of the legend labels
+        }
+      },
+      title: {
+        display: true,
+        text: 'Weather Data', // Add a title if needed
+        color: 'black' // Color of the title
       }
     }
   };
+  
 
   const getWeatherBackground = weather => {
     switch (weather) {
       case 'clear':
+        return 'sunny-bg';
+      case 'sunny':
         return 'sunny-bg';
       case 'clouds':
         return 'cloudy-bg';
@@ -118,8 +133,12 @@ const App = () => {
         return 'rainy-bg';
       case 'snow':
         return 'snowy-bg';
+      case 'thunderstorm':
+        return 'thunderstorm-bg';
+      case 'haze':
+        return 'haze-bg';
       default:
-        return 'default-bg';
+        return 'sunny-bg';
     }
   };
 
